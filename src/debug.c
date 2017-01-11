@@ -3,8 +3,7 @@
 
 void putc(char c)
 {
-    while (!(inb(SERIAL_PORT + 5) & 0x20));
-    outb(SERIAL_PORT, c);
+    vGalileoPrintc(c);
 }
 
 void puts(char *msg)
